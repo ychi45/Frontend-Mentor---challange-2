@@ -89,7 +89,7 @@ body {
   max-height: 522px;
   background-color: #fff;
   padding: 24px;
-  border: 2px solid #111111;
+  border: 1px solid #111111;
   border-radius: 20px;
 }
 .preview-module::before {
@@ -98,28 +98,46 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 8px;
+  left: 9px;
   border-radius: 20px;
   z-index: -1;
+}
+@media (max-width: 410px) {
+  .preview-module {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+  }
 }
 .preview-module .content .img-wrapper {
   margin-bottom: 24px;
 }
+@media (max-width: 410px) {
+  .preview-module .content .img-wrapper .img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
 .preview-module .content .terms-wrapper {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .preview-module .content .terms-wrapper .term {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 4px 12px;
   background-color: #F4D04E;
   color: #111111;
   border-radius: 5px;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
 }
 .preview-module .content .date-wrapper {
   margin-bottom: 8px;
+}
+.preview-module .content .date-wrapper .date {
+  font-size: 14px;
+  color: #111111;
+  font-weight: 600;
 }
 .preview-module .content .title-wrapper {
   margin-bottom: 12px;
@@ -137,7 +155,11 @@ body {
 .preview-module .content .title-wrapper .headline:hover {
   color: #F4D04E;
 }
+.preview-module .content .desc-wrapper {
+  margin-bottom: 24px;
+}
 .preview-module .content .author-wrapper .author-title {
   font-weight: 700;
   margin-left: 8px;
+  font-size: 14px;
 }
