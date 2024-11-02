@@ -22,7 +22,6 @@ body {
 }
 
 .container {
-  // background-color: #aaa;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -37,7 +36,7 @@ body {
   max-height: 522px;
   background-color: $white;
   padding: 24px;
-  border: 2px solid $secondary;
+  border: 1px solid $secondary;
   border-radius: 20px;
   // z-index: 1;
   
@@ -47,34 +46,55 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 8px;
+    left: 9px;
     border-radius: 20px;
     z-index: -1;
   }
 
+  @media (max-width: 410px) {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+  }
+
+
   .content {
     .img-wrapper {
       margin-bottom: 24px;
+
+      .img {
+        @media (max-width: 410px) {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
     }
+    
 
     .terms-wrapper {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
 
       .term {
         display: inline-block;
-        padding: 5px 10px;
+        padding: 4px 12px;
         background-color: $primary;
         color: $secondary;
         border-radius: 5px;
         font-size: 14px;
-        font-weight: 800;
+        font-weight: 700;
         
       }
     }
 
     .date-wrapper {
       margin-bottom: 8px;
+
+      .date {
+        font-size: 14px;
+        color: $secondary;
+        font-weight: 600;
+      }
     }
 
     .title-wrapper {
@@ -96,10 +116,15 @@ body {
       }
     }
 
+    .desc-wrapper {
+      margin-bottom: 24px;
+    }
+
     .author-wrapper {
       .author-title {
         font-weight: 700;
         margin-left: 8px;
+        font-size: 14px;
       }
     }
   }
